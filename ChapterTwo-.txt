@@ -1,0 +1,60 @@
+﻿/**编写程序，该程序支持用户通过键盘输入年份和月份，然后用户根据用户输入的年份和月份判断出该年该月的天数并输出结果*/
+import java.util.Scanner;
+
+public class example02_04 {
+    public static void main(String args[]) {
+    	int year;
+    	int mounth;
+    	Scanner in=new Scanner(System.in);
+    	System.out.println("please input year:");
+    	year=in.nextInt();
+    	System.out.println("please input mounth:");
+    	mounth=in.nextInt();
+    	if(mounth<1 || mounth>12)
+    	{
+    		System.out.println("mounth is not correct!");
+    	}
+    	else
+    	{
+    		if(year%4==0)
+    		{
+    			if(mounth==2)
+    			{
+    				System.out.println(year+"year"+mounth+"mounth has 29 days!");
+    			}
+    			else
+    			{
+    				if(mounth%2==0)
+    				{
+    					System.out.println(year+"year"+mounth+"mounth has 31 days!");
+    				}
+    				else
+    				{
+    					System.out.println(year+"year"+mounth+"mounth has 30 days!");
+    				}
+    			}
+    		}
+    		else
+    		{
+    			if(mounth==2)
+    			{
+    				System.out.println(year+"year"+mounth+"mounth has 28 days!");
+    			}
+    			else
+    			{
+    				if(mounth%2==0)
+    				{
+    					System.out.println(year+"year"+mounth+"mounth has 31 days!");
+    				}
+    				else
+    				{
+    					System.out.println(year+"year"+mounth+"mounth has 30 days!");
+    				}
+    			}
+    		}
+    		
+    	}
+    	
+    	
+	}         
+} 
