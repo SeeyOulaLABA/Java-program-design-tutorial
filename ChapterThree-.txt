@@ -1,0 +1,35 @@
+﻿/**定义学生类，输出学生信息*/
+class student
+{
+	int sid;
+	String major;
+	String name;
+	public void setid(int i)
+	{
+		sid=i;
+	}
+	public void setmajor(String m)
+	{
+		major=m;
+	}
+	public void setname(String n)
+	{
+		name=n;
+	}
+	public void showinformation()
+	{
+		System.out.println("姓名："+name+'\n'+"学号："+sid+'\n'+"专业："+major);
+	}
+	
+}
+
+public class example02_04 {
+    public static void main(String args[]) {
+    student s=new student();
+    s.setid(2015);
+    s.setmajor("计算机");
+    s.setname("晓明");
+    s.showinformation();
+    	
+    }
+}
