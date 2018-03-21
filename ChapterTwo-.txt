@@ -58,3 +58,39 @@ public class example02_04 {
     	
 	}         
 } 
+
+
+
+/**计算两个整数之间的素数*/
+import java.util.Scanner;
+
+public class example02_04 {
+    public static void main(String args[]) {
+    int min;
+    int max;
+    int num=0;
+    Scanner in=new Scanner(System.in);
+    System.out.println("please input min:");
+    min=in.nextInt();
+    System.out.println("please input max:");
+    max=in.nextInt();
+    for(int i=min;i<=max;i++)
+    {
+    	boolean flag=true;
+    	for(int k=2;k<i;k++)
+    	{
+    		if(i%k==0)
+    		{
+    			flag=false;
+    			break;
+    		}
+    	}
+    	if(flag)
+    	{
+    		System.out.print(i+" ");
+    	}
+    	
+    }
+
+	}         
+} 
