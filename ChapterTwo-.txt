@@ -48,7 +48,7 @@ public class example02_04 {
     				}
     				else
     				{
-    					System.out.println(year+"year"+mounth+"mounth has 30 days!");
+    					System.out.println(我是分支啊);
     				}
     			}
     		}
