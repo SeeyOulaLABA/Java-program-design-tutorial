@@ -33,3 +33,50 @@ public class example02_04 {
     	
     }
 }
+
+
+/**三种方法重载构造函数
+通过subString()方法来进行字符串截取,能取头不能取尾*/
+import java.awt.geom.Dimension2D;
+import java.util.Scanner;
+class Date
+{
+	int data;
+	int mounth;
+	int year;
+	public Date() {
+		// TODO Auto-generated constructor stub
+	}
+	public Date(String str)
+	{
+		data=Integer.valueOf(str.substring(0, 2));
+		mounth=Integer.valueOf(str.substring(2,4));
+		year=Integer.valueOf(str.substring(4,8));
+	}
+	public Date(int d,int m,int y)
+	{
+		data=d;
+		mounth=m;
+		year=y;
+	}
+	public void show()
+	{
+		System.out.println("today is"+year+"."+mounth+"."+data);
+	}
+
+}
+public class example02_04 {
+    public static void main(String args[]) {
+    	Scanner in=new Scanner(System.in);
+    	Date d1=new Date();
+    	d1.data=in.nextInt();
+    	d1.mounth=in.nextInt();
+    	d1.year=in.nextInt();
+    	Date d2=new Date("01012018");
+    	Date d3=new Date(01,01,2018);
+    	d1.show();
+    	d2.show();
+    	d3.show();
+
+    }
+}
